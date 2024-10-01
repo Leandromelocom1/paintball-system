@@ -10,10 +10,17 @@
     "postinstall": "chmod -R 755 node_modules"
   },
   "dependencies": {
+    "@react-native-community/masked-view": "^0.1.11",
+    "@react-navigation/native": "^6.1.18",
+    "@react-navigation/stack": "^6.4.1",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-native-gesture-handler": "^2.20.0",
+    "react-native-reanimated": "^3.15.4",
+    "react-native-safe-area-context": "^4.11.0",
+    "react-native-screens": "^3.34.0",
     "react-router-dom": "^6.26.2",
     "react-scripts": "^5.0.0"
   },

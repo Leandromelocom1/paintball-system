@@ -4,6 +4,7 @@ import { CustomerForm } from './components/CustomerForm';
 import { WeaponForm } from './components/WeaponForm';
 import { MatchForm } from './components/MatchForm';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importação do JS do Bootstrap para dropdowns funcionarem corretamente
 
 const Home = () => <div><h2>Home</h2><p>Bem-vindo ao sistema de paintball!</p></div>;
 const Balance = () => <div><h2>Saldo</h2><p>Controle de saldo de clientes.</p></div>;
@@ -15,7 +16,7 @@ function App() {
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <Link className="navbar-brand" to="/">Paintball System</Link>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
@@ -23,11 +24,14 @@ function App() {
               <li className="nav-item">
                 <Link className="nav-link" to="/">Home</Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/cadastro-cliente">Cadastro de Cliente</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/armas">Armas</Link>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" id="cadastroDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Cadastro
+                </a>
+                <ul className="dropdown-menu" aria-labelledby="cadastroDropdown">
+                  <li><Link className="dropdown-item" to="/cadastro-cliente">Cadastro de Cliente</Link></li>
+                  <li><Link className="dropdown-item" to="/armas">Armas</Link></li>
+                </ul>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/partida">Partida</Link>
