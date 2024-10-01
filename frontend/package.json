@@ -4,10 +4,10 @@
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=false react-scripts build", // Desativa o CI durante o build
+    "build": "CI=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postinstall": "chmod -R 755 node_modules" // Ajusta permissões após a instalação
+    "postinstall": "chmod -R 755 node_modules"
   },
   "dependencies": {
     "axios": "^1.7.7",
